@@ -1,5 +1,13 @@
 # 🏥 Smart Healthcare System (AI + ML Project)
 
+## 🔗 Live Demo
+- 🖥️ **Frontend App:** [smart-healthcare-system-g2noeimwfpfw2gnnebzrwf.streamlit.app](https://smart-healthcare-system-g2noeimwfpfw2gnnebzrwf.streamlit.app/)
+- ⚙️ **Backend API Docs:** [smart-healthcare-system-dtx1.onrender.com/docs](https://smart-healthcare-system-dtx1.onrender.com/docs)
+
+> ⚠️ Note: Backend is hosted on Render's free tier, so it may take 30-50 seconds to wake up on first request.
+
+---
+
 ## 📌 Overview
 
 The **Smart Healthcare System** is a full-stack AI-powered web application that predicts:
@@ -85,54 +93,45 @@ This project combines **Machine Learning + FastAPI + Streamlit + SQLite** into a
 # 🏗️ Tech Stack
 
 ### Frontend
-
 * Streamlit
 
 ### Backend
-
 * FastAPI
 
 ### Database
-
 * SQLite
 
 ### ML Libraries
-
 * Scikit-learn
 * Pandas
 * NumPy
 
 ### Other
-
 * ReportLab (PDF)
 * Matplotlib (charts)
 * JWT Authentication
 
+### Deployment
+* Backend → Render
+* Frontend → Streamlit Community Cloud
+
 ---
 
-
-# ⚙️ Installation & Setup
+# ⚙️ Installation & Setup (Run Locally)
 
 ## 1️⃣ Clone Project
-
 ```bash
-git clone <your-repo-link>
-cd smart_healthcare_system
+git clone https://github.com/gagan6571/smart-healthcare-system.git
+cd smart-healthcare-system
 ```
 
----
-
 ## 2️⃣ Create Virtual Environment
-
 ```bash
 python -m venv venv
 venv\Scripts\activate   # Windows
 ```
 
----
-
 ## 3️⃣ Install Dependencies
-
 
 **Backend:**
 ```bash
@@ -144,25 +143,22 @@ pip install -r requirements.txt
 ```bash
 cd frontend
 pip install -r requirements.txt
+```
 
----
-
-## 4️⃣ Run Backend (FastAPI)
-
+## 4️⃣ Setup Environment Variables
+Copy `.env.example` to `.env` inside `backend/` folder and fill actual values:
 ```bash
-uvicorn backend.main:app --reload
+cd backend
+cp .env.example .env
 ```
 
-👉 Runs at:
-
+## 5️⃣ Run Backend (FastAPI)
+```bash
+uvicorn main:app --reload
 ```
-http://127.0.0.1:8000
-```
+👉 Runs at: `http://127.0.0.1:8000`
 
----
-
-## 5️⃣ Run Frontend (Streamlit)
-
+## 6️⃣ Run Frontend (Streamlit)
 ```bash
 cd frontend
 streamlit run app.py
@@ -173,17 +169,14 @@ streamlit run app.py
 # 🔐 Authentication
 
 ### User Login
-
 * Register new user
 * Login with email & password
 
 ### Admin Login
-
 * Uses `.env` credentials:
-
 ```env
-ADMIN_EMAIL=admin@example.com
-ADMIN_PASSWORD=admin123
+ADMIN_EMAIL=your_admin_email
+ADMIN_PASSWORD=your_admin_password
 ```
 
 ---
@@ -212,7 +205,6 @@ ADMIN_PASSWORD=admin123
 
 * Downloadable reports
 * Includes:
-
   * Prediction result
   * Probability
   * Health summary
@@ -222,7 +214,6 @@ ADMIN_PASSWORD=admin123
 # 🧪 Sample Inputs
 
 ## Heart Prediction
-
 ```json
 {
   "age": 45,
@@ -241,10 +232,7 @@ ADMIN_PASSWORD=admin123
 }
 ```
 
----
-
 ## Fitness Prediction
-
 ```json
 {
   "age": 23,
@@ -271,6 +259,7 @@ ADMIN_PASSWORD=admin123
 * AI chatbot integration
 * Clean UI/UX
 * Production-ready structure
+* Live deployed on Render + Streamlit Cloud
 
 ---
 
@@ -282,7 +271,7 @@ This system is for **educational purposes only** and does not replace profession
 
 # 👨‍💻 Author
 
-**GAGAN**
+**Gagan**
 
 ---
 
